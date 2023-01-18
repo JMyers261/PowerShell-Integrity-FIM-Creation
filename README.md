@@ -3,22 +3,24 @@
  FIM (File Integrity Monitoring) using PowerShell
 
 <h2>Description</h2>
-The project outlined in the instructions is a File Integrity Monitoring (FIM) system created using PowerShell. The goal of the project is to detect and alert authorized personnel to unauthorized changes to files and directories on a computer or network. The project will accomplish the following:
-
-•	Create a new PowerShell script that will be used to perform FIM
-
+The project outlined in the instructions is a File Integrity Monitoring (FIM) system created using PowerShell. The project aims to detect and alert authorized personnel to unauthorized changes to files and directories on a computer or network. The project will accomplish the following:
+<br />
+<br /> 
+<b>•	Create a new PowerShell script that will be used to perform FIM. 
+<br />
 •	Add a function to calculate the hash value of a file, which will be used to identify if a file has been modified.
-
+<br />
 •	Add a function to compare the current and previous hash values, which will be used to determine if a file has been modified.
-
-•	Add a function to send an alert email if a file has been modified
-
+<br />
+•	Add a function to send an alert email if a file has been modified.
+<br />
 •	Add a function to check the integrity of a file, which will use the functions defined above to calculate the current hash value of the file, compare it with the previous hash value, and send an alert email if the file has been modified. It also updates the previous hash file with the current hash value.
-
+<br />
 •	Test the script to make sure it's working as expected.
-
-•	Automate the script to run on a regular basis.
-
+<br />
+•	Automate the script to run on a regular basis.</b>
+<br />
+<br />
 By completing this project, you will learn how to use PowerShell to create a FIM system, including how to calculate the hash value of a file, compare the current and previous hash values, send an alert email, check the integrity of a file, and how to automate the process. Additionally, you will gain experience in using specific PowerShell cmdlets like Get-FileHash, Compare-Object, and Send-MailMessage.
 
 <br />
