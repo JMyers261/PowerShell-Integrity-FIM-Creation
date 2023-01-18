@@ -27,7 +27,7 @@ By completing this project, you will learn how to use PowerShell to create a FIM
 <h2>Languages and Utilities Used</h2>
 
 - <b>PowerShell</b> 
-- <b>Diskpart</b>
+ <b></b>
 
 <h2>Environments Used </h2>
 
@@ -39,33 +39,33 @@ By completing this project, you will learn how to use PowerShell to create a FIM
 
 Here is a step-by-step tutorial that covers how to create a PowerShell script for file integrity monitoring:
 
-1.	Create a new PowerShell script: Open PowerShell and create a new script by typing New-Item -ItemType File -Path "C:\path\to\fim.ps1" and pressing enter. This will create a new script file named fim.ps1 in the specified path.
+ 1.	<b>Create a new PowerShell script:</b> Open PowerShell and create a new script by typing <b>New-Item -ItemType File -Path "C:\path\to\fim.ps1"</b> and pressing enter. This will create a new script file named <b>fim.ps1</b> in the specified path.
 
-2.	Add a function to calculate the hash value of a file: In the script file, add the following function:
+ 2.	<b>Add a function to calculate the hash value of a file:</b> In the script file, add the following function:
  <br/>
 <img src="https://i.imgur.com/JtcxWcU.jpg" height="80%" width="80%"/>
 <br />
 <br />
-This function takes in a file path as a parameter and uses the Get-FileHash cmdlet to calculate the hash value of the file. It then stores the value in a variable and returns it.
+ This function takes in a file path as a parameter and uses the <b>Get-FileHash</b> cmdlet to calculate the hash value of the file. It then stores the value in a variable and returns it.
 <br />
 <br />
-3.	Add a function to compare the current and previous hash values: In the script file, add the following function:
+ 3.	<b>Add a function to compare the current and previous hash values:</b> In the script file, add the following function:
   <br/>
 <img src="https://i.imgur.com/FKMOt9W.jpg" height="80%" width="80%"/>
  <br />
 <br />
-This function takes in the current and previous hash values as parameters and uses the Compare-Object cmdlet to compare them. It then stores the result in a variable and returns it.
+This function takes in the current and previous hash values as parameters and uses the <b>Compare-Object</b> cmdlet to compare them. It then stores the result in a variable and returns it.
 <br />
 <br />
-4.	Add a function to send an alert email: In the script file, add the following function:
+ 4.	<b>Add a function to send an alert email:</b> In the script file, add the following function:
  <br/>
 <img src="https://imgur.com/9whBdfl.jpg" height="80%" width="80%"/>
 <br />
 <br />
-This function takes in the file path as a parameter and uses the Send-MailMessage cmdlet to send an email alert to the specified email address.
+ This function takes in the file path as a parameter and uses the <b>Send-MailMessage</b> cmdlet to send an email alert to the specified email address.
 <br />
 <br />
-5.	Add a function to check the integrity of a file: In the script file, add the following function:
+ 5.	<b>Add a function to check the integrity of a file:</b> In the script file, add the following function:
  <br/>
 <img src="https://i.imgur.com/7AxPdj1.jpg" height="80%" width="80%"/>
 <br />
@@ -73,7 +73,7 @@ This function takes in the file path as a parameter and uses the Send-MailMessag
 This function takes in the file path and the previous hash file path as parameters. It then uses the functions defined in steps 2 and 3 to calculate the current hash value of the file, compare it with the previous hash value, and send an alert email if the file has been modified. It also updates the previous hash file with the current hash value.
 <br />
 <br />
-6.	Test the script: Before using the script on a regular basis, you should test it first to make sure it's working as expected. To do this, you can use the Check-FileIntegrity function and pass in the path to a test file and a test previous hash file. For example, you can use the following command:
+ 6.	<b>Test the script:</b> Before using the script on a regular basis, you should test it first to make sure it's working as expected. To do this, you can use the <b>Check-FileIntegrity</b> function and pass in the path to a test file and a test previous hash file. For example, you can use the following command:
   <br/>
 <img src="https://imgur.com/RylZzZ9.jpg" height="80%" width="80%"/>
 <br />
@@ -81,15 +81,15 @@ This function takes in the file path and the previous hash file path as paramete
 This will run the function and check the integrity of the test file. If the file has been modified, it will send an alert email and update the test’s previous hash file with the current hash value.
 <br />
 <br />
-7.	Automate the script: Once you've confirmed that the script is working as expected, you can automate it to run on a regular basis. You can use the Windows Task Scheduler to schedule the script to run at specific intervals. For example, you can schedule it to run daily at a specific time.
+ 7.	<b>Automate the script:</b> Once you've confirmed that the script is working as expected, you can automate it to run on a regular basis. You can use the Windows Task Scheduler to schedule the script to run at specific intervals. For example, you can schedule it to run daily at a specific time.
 <br />
 <br />
-8.	Using Get-ChildItem cmdlet to check all files in a directory: To check all files in a directory and all of its subdirectories, you can use the Get-ChildItem cmdlet to get all the files in a specific directory, and then use a loop to iterate over each file and check its integrity using the Check-FileIntegrity function. For example, you can use the following command:
+ 8.	<b>Using Get-ChildItem cmdlet to check all files in a directory:</b> To check all files in a directory and all of its subdirectories, you can use the <b>Get-ChildItem</b> cmdlet to get all the files in a specific directory, and then use a loop to iterate over each file and check its integrity using the <b>Check-FileIntegrity</b> function. For example, you can use the following command:
   <br/>
 <img src="https://imgur.com/oDvaq5q.jpg" height="80%" width="80%"/>
 <br />
 <br />
-This command gets all the files in the specified directory and its subdirectories and then iterates over each file, running the Check-FileIntegrity function on each file.
+This command gets all the files in the specified directory and its subdirectories and then iterates over each file, running the <b>Check-FileIntegrity</b> function on each file.
 <br />
 <br />
 Keep in mind that you should use the appropriate path for your environment and also, this is just one way to create a file integrity monitoring system using PowerShell.
